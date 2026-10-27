@@ -1,0 +1,27 @@
+{
+  "name": "antd-admin",
+  "version": "6.0.0",
+  "description": "AI-friendly enterprise front-end best practices",
+  "license": "MIT",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "fmt": "turbo run fmt",
+    "lint": "turbo run lint",
+    "preinstall": "git config core.hooksPath .githooks && git config --local vp.hooks.disabled true",
+    "setup:git-hooks": "git config core.hooksPath .githooks && git config core.hooksPath"
+  },
+  "devDependencies": {
+    "turbo": "^2.11.9"
+  },
+  "packageManager": "pnpm@10.33.2",
+  "pnpm": {
+    "overrides": {
+      "vite@*": "npm:@voidzero-dev/vite-plus-core@0.3.3"
+    },
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "msw"
+    ]
+  }
+}

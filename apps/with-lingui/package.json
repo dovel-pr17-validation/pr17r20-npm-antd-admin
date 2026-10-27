@@ -1,0 +1,55 @@
+{
+  "name": "antd-admin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "tsc && vp build",
+    "preview": "vp preview",
+    "prepare": "vp config",
+    "fmt": "vp fmt",
+    "lint": "vp lint",
+    "check": "vp check --no-fmt",
+    "test:unit": "vp test run",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "i18n:extract": "vp exec lingui extract -- --clean",
+    "i18n:compile": "vp exec lingui compile",
+    "i18n:check": "pnpm run i18n:extract && git diff --exit-code -- src/locales"
+  },
+  "dependencies": {
+    "@lingui/core": "^6.10.0",
+    "@lingui/react": "^6.10.0",
+    "@tanstack/react-query": "^5.104.3",
+    "@tanstack/react-router": "^1.170.45",
+    "antd": "^6.6.6",
+    "axios": "^1.20.0",
+    "lucide-react": "^1.59.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@lingui/cli": "^6.10.0",
+    "@lingui/format-po": "^6.10.0",
+    "@lingui/swc-plugin": "^6.7.1",
+    "@lingui/vite-plugin": "^6.10.0",
+    "@playwright/test": "^1.64.1",
+    "@tanstack/router-plugin": "^1.168.47",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react-swc": "^4.3.3",
+    "msw": "^2.15.0",
+    "typescript": "~6.0.3",
+    "vite": "npm:@voidzero-dev/vite-plus-core@0.3.3",
+    "vite-plus": "0.3.3"
+  },
+  "packageManager": "pnpm@10.33.2",
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+---
+title: Running Tests
+description: Run unit and e2e tests in this repository
+---
+
+# Running Tests
+
+Run tests from repository root or per app.
+
+From a template app directory (`apps/basic` or `apps/with-lingui`):
+
+```bash
+pnpm run test:unit
+pnpm run test:e2e
+pnpm run test:e2e -- e2e/login.spec.ts e2e/users.spec.ts   # focused core flows
+pnpm run test:e2e:ui
+```
+
+Monorepo-wide (if configured):
+
+```bash
+pnpm -r test
+```
+
+Set up CI to run `vp check` and E2E on pull requests before merge. See each app **`AGENTS.md`** for toolchain rules.

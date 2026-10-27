@@ -1,0 +1,32 @@
+---
+title: Basic 模板
+description: apps/basic — 默认英文界面的管理后台模板
+---
+
+# Basic 模板
+
+路径：**[`apps/basic`](https://github.com/zuiidea/antd-admin/tree/master/apps/basic)**。
+
+## 定位
+
+完整的管理后台模板，UI 文案以源码中的 plain strings 为主，**默认语言为英文**；Ant Design 固定 **`en_US`**。未内置 Lingui 与语言切换，可自行接入 i18n，或选用 **with-lingui** 模板。
+
+## 技术栈摘要
+
+构建：[Vite+](https://viteplus.dev)；UI：Ant Design 6；路由：TanStack Router；数据：TanStack Query；本地状态：Zustand；校验：Zod；API：`defineApi` 分模块（`src/api/shared/`、`auth/`、`users/`）；Mock：MSW；E2E：Playwright。
+
+API 与 Mock 约定见 [开发代理与 Mock](/backend/proxying-api-requests)。
+
+## 常用命令
+
+```bash
+cd apps/basic
+vp install
+vp dev
+```
+
+详见 **[可用脚本](/getting-started/available-scripts)** 与各应用 `package.json`。
+
+## 权威文档
+
+完整特性、目录树与脚本说明以仓库内 **[apps/basic/README.md](https://github.com/zuiidea/antd-admin/blob/master/apps/basic/README.md)** 为准。
